@@ -3,6 +3,6 @@
 ## How to run
 
 ```
-php users-csv.php {env-name}
-for example: php users-csv.php integration
+ruby users-csv.rb {profile-name}
+for example: ruby users-csv.rb govuk-integration
 ```
