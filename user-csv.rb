@@ -16,11 +16,11 @@ AWS_PROFILE = ARGV[0]
 users = aws_iam("list-users")
 users = users["Users"]
 
-print "#{users.size} users found.\n"
+puts "#{users.size} users found."
 
 file_name = "aws-users-#{AWS_PROFILE}.csv"
 
-print "Generating CSV with filename: #{file_name}\n"
+puts "Generating CSV"
 
 CSV.open(file_name, "w") do |csv|
   csv << [
@@ -49,4 +49,4 @@ CSV.open(file_name, "w") do |csv|
     csv << row
   end
 end
-print "\nCSV generated: #{file_name}\n"
+puts "\nCSV generated: #{file_name}"
